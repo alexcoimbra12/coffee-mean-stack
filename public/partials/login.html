@@ -1,0 +1,43 @@
+<div class="container" ng-show="!loading">
+	<div class="row">
+		<p class="alert-danger">{{message}}</p>
+		<form class="col s12" ng-submit="autenticar()">
+		  <div class="row">
+		    <div class="input-field col s12">
+		      <input id="login" ng-model="user.login" type="text" class="validate">
+		      <label for="login">Login</label>
+		    </div>
+		  </div>
+		  <div class="row">
+		    <div class="input-field col s12">
+		      <input id="password" type="password" ng-model="user.password" class="validate">
+		      <label for="password">Senha</label>
+		    </div>
+		  </div>
+		  <div class="row center-align">
+		  	  <button class="btn waves-effect waves-green brown darken-4" type="submit" name="action">Entrar
+			    <i class="material-icons right">send</i>
+			  </button>
+		  </div>
+		</form>
+		<div  class="right-align">
+			<a href="/cadastrar">Efeturar Cadastro</a>
+		</div>
+	</div>
+</div>
+
+<div class="container" ng-show="loading">
+   <div class="centro">
+      <div class="preloader-wrapper big active" >
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+   </div>   
+</div>

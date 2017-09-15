@@ -1,0 +1,97 @@
+<html ng-app="app">
+<head>
+	<base href="/">
+	<title>Cadastro de Usuários</title>
+	<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- <link rel="stylesheet" type="text/css" href="node_modules/materialize-css/bin/materialize.css"> -->
+	<link rel="stylesheet" type="text/css" href="node_modules/materialize-css/css/ghpages-materialize.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/materialize-css/css/prism.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="node_modules/angular-route/angular-route.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+
+	<header>
+	  <nav class="top-nav brown lighten-1">
+	    <div class="container">
+		    <div class="nav-wrapper">
+		      <a class="page-title">{{title}}</a>
+		    </div>
+	    </div>
+	  </nav>
+
+	  <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav waves-effect waves-light circle hide-on-large-only "><i class="material-icons">menu</i></a></div>
+	  
+	  <ul id="nav-mobile" class="side-nav fixed">
+	  	
+	  	<li ng-if="!isLogin">
+			<div class="userView">
+	      		<div class="background">
+	        		<img src="http://i732.photobucket.com/albums/ww330/Cainos/BG_scratchedgrunge.jpg">
+	      		</div>
+	      		<a href="#!"><img class="circle" src="https://s-media-cache-ak0.pinimg.com/originals/4d/88/0a/4d880a586f2e5fdaa6c4f837d65bfa45.jpg"></img></a>
+	      		<a href="#!"><span class="white-text name"></span></a>
+	    	</div>
+	  	</li>
+	  	
+	    <li ng-if="isLogin">
+    		<div class="userView">
+	      		<div class="background">
+	        		<img src="http://i732.photobucket.com/albums/ww330/Cainos/BG_scratchedgrunge.jpg">
+	      		</div>
+	      		<a href="#!user"><img class="circle" src="https://v.cdn.vine.co/r/avatars/671CEDCE1F1113556201746333696_pic-r-140846669103296d6214bd7.jpg.jpg?versionId=jaRwq5D74p4U_ZMTBASizw3gwpbRLNLl"></a>
+	      		<a href="#!name"><span class="white-text name">{{userName}}</span></a>
+	      		<a href="#!email"><span class="white-text email">{{userMail}}</span></a>
+	    	</div>
+	    </li>
+	  	<li class="bold">
+	  		<a href="/receitas" class="waves-effect waves-teal">Receitas</a>
+	  	</li>
+	  	<li class="bold">
+	  		<a href="{{login.value}}" class="waves-effect waves-teal">{{login.title}}</a>
+	  	</li>
+	  </ul>	
+	</header>
+
+	<main>
+	  <div ng-view></div> 	
+	</main>
+
+	<footer class="page-footer brown lighten-1">
+	  <div class="container">
+	    <div class="row">
+	      <div class="col l6 s12">
+	        <h5 class="white-text">Receitas de Café</h5>
+	        <p class="grey-text text-lighten-4">Diversas receitas de café para você fazer em casa</p>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="footer-copyright">
+	    <div class="container">
+	    Created by alexcoimbra12
+	    </div>
+	  </div>
+	</footer>
+
+
+<script type="text/javascript" src="node_modules/materialize-css/bin/materialize.js"></script>
+<script type="text/javascript" src="node_modules/materialize-css/js/prism.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/controllers/receita-controller.js"></script>
+<script type="text/javascript" src="js/controllers/home-controller.js"></script>
+<script type="text/javascript" src="js/controllers/login-controller.js"></script>
+<script type="text/javascript" src="js/controllers/cadastro-controller.js"></script>
+<script type="text/javascript" src="js/services/token-interceptor.js"></script>
+<script type="text/javascript">
+      $('.button-collapse').sideNav();
+
+      $('#nav-mobile').click(function () {
+      	$('.button-collapse').sideNav('hide');
+      });
+</script>
+</body>
+</html>

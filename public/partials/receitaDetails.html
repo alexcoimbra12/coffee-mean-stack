@@ -1,0 +1,39 @@
+<div class="container" ng-if="!loading">
+	<div class="row">
+		<h2>{{receita.title}}</h2>
+		<p>{{receita.longDescription}}</p>
+	</div>
+	<div class="row">
+		<blockquote>Ingredientes</blockquote>
+	    <ul class="collection" >
+	      	<li class="collection-item" ng-repeat="ingredientes in receita.ingredientes">{{ingredientes}}</li>
+	    </ul>	
+	</div>
+	<div class="row">
+		<blockquote>Modo de preparo</blockquote>
+		<p>{{receita.prepareMode}}</p>
+	</div>
+
+	<div class="row">
+		<a class="waves-effect waves-light btn brown lighten-2" href="javascript:history.back()"><i class="material-icons left">skip_previous</i>Voltar</a>
+
+	</div>
+
+</div>
+
+<div class="container" ng-if="loading">
+   <div class="centro">
+      <div class="preloader-wrapper big active" >
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+   </div>   
+</div>
+	

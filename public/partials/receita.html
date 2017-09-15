@@ -1,0 +1,32 @@
+<div class="row" ng-repeat="receita in receitas" ng-if="!loading">
+  <div class="col s12 m6">
+    <div class="card hoverable">
+      <div class="card-image">
+        <img src="{{receita.img}}">
+        <span class="card-title">{{receita.title}}</span>
+      </div>
+      <div class="card-content">
+        <p>{{receita.shortDescription}}</p>
+      </div>
+      <div class="card-action">
+        <a href="/receitas/{{receita._id}}">Vizualizar Receita</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" ng-show="loading">
+   <div class="centro">
+      <div class="preloader-wrapper big active" >
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+   </div>   
+</div>

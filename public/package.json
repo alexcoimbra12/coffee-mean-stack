@@ -1,0 +1,13 @@
+{
+  "name": "coffe_front",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {},
+  "author": "alexcoimbra12",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.0",
+    "angular-route": "^1.6.0",
+    "materialize-css": "^0.97.8"
+  }
+}
