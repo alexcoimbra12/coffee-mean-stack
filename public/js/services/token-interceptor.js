@@ -22,7 +22,7 @@ angular.module('app').factory('tokenInterceptor', function ($location, $window, 
 		}
 
 		return config;
-	}
+	};
 
 	interceptor.responseError = function(rejection) {
 		if(rejection != null && rejection.status == 401) {
@@ -31,7 +31,7 @@ angular.module('app').factory('tokenInterceptor', function ($location, $window, 
 		}
 
 		return $q.reject(rejection);
-	}
+	};
 
 	return interceptor;
 });

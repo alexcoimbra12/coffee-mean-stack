@@ -6,7 +6,6 @@ var model = mongoose.model('Receita');
 
 api.list = function (req, res) {
 	
-	console.log('chegou')
 	model.find(function(error, receitas) {
 		if(error) {
 			res.status(500).json(error);

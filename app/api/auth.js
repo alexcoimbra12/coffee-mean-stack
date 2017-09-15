@@ -46,7 +46,7 @@ module.exports = function(app) {
 				}
 				req.user = decoded;
 				next();
-			})
+			});
 		} else {
 			console.log('Token nao enviado');
 			res.sendStatus(401);

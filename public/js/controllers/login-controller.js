@@ -32,6 +32,6 @@ angular.module('app').controller('LoginController', function ($rootScope, $scope
 				console.log(error);
 				$scope.message = 'Login ou senha invalidos';
 				$scope.loading = false;
-			})
+			});
 	};
 });

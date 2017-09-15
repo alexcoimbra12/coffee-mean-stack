@@ -2,9 +2,13 @@
   "name": "coffee",
   "version": "1.0.0",
   "main": "server.js",
+  "devDependencies": {
+    "jshint": "^2.6.0"
+  },
   "scripts": {
     "start": "node server.js",
-    "postinstall": "cd public && npm install"
+    "postinstall": "cd public && npm install",
+    "test": "./node_modules/.bin/jshint --exclude ./node_modules,./public/node_modules ."
   },
   "author": "alexcoimbra12",
   "license": "ISC",

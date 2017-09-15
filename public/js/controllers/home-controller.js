@@ -4,7 +4,7 @@ angular.module('app').controller('HomeController',function ($rootScope) {
 	$rootScope.login = {
 		title: 'Sair',
 		value: '/logout'
-	}
+	};
 
 	$rootScope.isLogin = true;
 });
